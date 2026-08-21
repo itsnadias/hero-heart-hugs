@@ -158,7 +158,7 @@ function validate(
       activities: (Array.isArray(lv?.activities) ? lv.activities : [])
         .slice(0, 4)
         .filter((act: any) => isValidActivity(act)),
-      askTeam: lv?.askTeam ? String(lv.askTeam) : undefined,
+      ...(lv?.askTeam ? { askTeam: String(lv.askTeam) } : {}),
     }))
     .filter((lv: any) => lv.cards.length > 0 && lv.activities.length > 0);
 
