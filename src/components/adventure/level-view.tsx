@@ -22,7 +22,14 @@ export function LevelView({
   const [activityIndex, setActivityIndex] = useState(0);
   const [earned, setEarned] = useState(0);
 
-  const bubble = `bg-${buddy.colorClass}/20 border-${buddy.colorClass}`;
+  const bubbles: Record<string, string> = {
+    sunny: "bg-sunny/20 border-sunny",
+    sky: "bg-sky/20 border-sky",
+    leaf: "bg-leaf/20 border-leaf",
+    mango: "bg-mango/20 border-mango",
+    grape: "bg-grape/20 border-grape",
+  };
+  const bubble = bubbles[buddy.colorClass] ?? "bg-muted border-border";
 
   return (
     <section className="card-playful mx-auto w-full max-w-3xl p-6 sm:p-8">
