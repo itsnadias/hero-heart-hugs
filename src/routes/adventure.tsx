@@ -16,7 +16,7 @@ const GIFTS = [
 
 export const Route = createFileRoute("/adventure")({
   validateSearch: (search: Record<string, unknown>) => ({
-    topic: typeof search.topic === "string" ? search.topic : "leukemia",
+    topic: typeof search['topic'] === "string" ? (search['topic'] as string) : "leukemia",
   }),
   head: () => ({
     meta: [
@@ -210,8 +210,9 @@ function AdventurePage() {
             points: done ? next + POINTS.finish : next,
             levelsDone: levelIndex + 1,
             totalLevels,
-            completedAt: done ? new Date().toISOString() : undefined,
-            gift: done ? `${gift.emoji} ${gift.name}` : undefined,
+            ...(done
+              ? { completedAt: new Date().toISOString(), gift: `${gift.emoji} ${gift.name}` }
+              : {}),
           });
           if (done) {
             playSound("celebrate");
