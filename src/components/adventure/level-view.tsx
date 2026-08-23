@@ -78,8 +78,26 @@ export function LevelView({
               {level.cards[cardIndex]!.emoji}
             </div>
             <h3 className="mt-2 text-2xl">{level.cards[cardIndex]!.title}</h3>
+            {(() => {
+              const art = pickIllustration(
+                level.cards[cardIndex]!.title,
+                level.cards[cardIndex]!.body,
+                level.title,
+              );
+              return art ? (
+                <img
+                  src={art.src}
+                  alt={art.alt}
+                  loading="lazy"
+                  width={768}
+                  height={512}
+                  className="mt-3 w-full rounded-2xl border-3 border-border bg-card object-cover"
+                />
+              ) : null;
+            })()}
             <p className="mt-2 text-lg">{level.cards[cardIndex]!.body}</p>
           </div>
+
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <button
               onClick={() => speak(level.cards[cardIndex]!.body)}
