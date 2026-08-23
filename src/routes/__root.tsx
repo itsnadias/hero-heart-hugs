@@ -77,11 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Brave Buddies — Gentle Cancer Learning for Kids" },
+      {
+        name: "description",
+        content:
+          "A hopeful, playful adventure where animal buddies help children learn about cancer in kind, simple words.",
+      },
+      { property: "og:title", content: "Brave Buddies — Gentle Cancer Learning for Kids" },
+      {
+        property: "og:description",
+        content: "Five friendly animal buddies, five levels, and kind facts children can understand.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
