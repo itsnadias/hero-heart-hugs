@@ -3,6 +3,8 @@ import { CHARACTERS, POINTS, type Level } from "@/lib/adventure-types";
 import { useAppState } from "@/lib/app-state";
 import { ActivityPlayer } from "./activity-player";
 import { cn } from "@/lib/utils";
+import { pickIllustration } from "@/lib/card-illustrations";
+
 
 export function LevelView({
   level,
