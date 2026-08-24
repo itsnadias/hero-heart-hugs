@@ -138,11 +138,22 @@ export function LevelView({
                 setActivityIndex(activityIndex + 1);
               } else {
                 playSound("celebrate");
-                onComplete(total2 + POINTS.level);
+                if (settings.reduceMotion) {
+                  onComplete(total2 + POINTS.level);
+                } else {
+                  setShowConfetti(true);
+                }
               }
             }}
           />
         </div>
+      )}
+
+      {showConfetti && (
+        <ConfettiPoppers
+          active={showConfetti}
+          onDone={() => onComplete(earned + POINTS.level)}
+        />
       )}
 
       {level.askTeam && (
