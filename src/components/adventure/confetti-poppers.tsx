@@ -1,52 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export function triggerConfetti() {
-  if (typeof window === "undefined") return;
-
-  const duration = 1200;
-  const end = Date.now() + duration;
-  const colors = ["#FACC15", "#F472B6", "#60A5FA", "#A78BFA", "#34D399"];
-
-  const frame = () => {
-    const now = Date.now();
-    if (now > end) return;
-    const progress = (end - now) / duration;
-    const particleCount = Math.floor(4 * progress) + 2;
-
-    for (let i = 0; i < particleCount; i++) {
-      const color = colors[Math.floor(Math.random() * colors.length)] ?? "#FACC15";
-      const el = document.createElement("div");
-      el.style.position = "fixed";
-      el.style.left = `${Math.random() * 100}vw`;
-      el.style.top = "-10px";
-      el.style.width = `${Math.random() * 8 + 6}px`;
-      el.style.height = `${Math.random() * 8 + 6}px`;
-      el.style.backgroundColor = color;
-      el.style.borderRadius = Math.random() > 0.5 ? "50%" : "2px";
-      el.style.pointerEvents = "none";
-      el.style.zIndex = "9999";
-      el.style.transition = "transform 2s ease-out, opacity 2s ease-out";
-      el.style.opacity = "1";
-      document.body.appendChild(el);
-
-      const angle = Math.random() * Math.PI + Math.PI / 2;
-      const distance = Math.random() * 40 + 30;
-      const rotation = Math.random() * 720 - 360;
-      setTimeout(() => {
-        el.style.transform = `translate(${Math.cos(angle) * distance}vh, ${Math.sin(angle) * distance + 60}vh) rotate(${rotation}deg)`;
-        el.style.opacity = "0";
-      }, 30);
-
-      setTimeout(() => el.remove(), 2000);
-    }
-
-    requestAnimationFrame(() => setTimeout(frame, 60));
-  };
-
-  frame();
-}
-
-export function ConfettiPoppers({ active, onDone }: { active: boolean; onDone?: () => void }) {
+export function ConfettiPoppers({ active }: { active: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [running, setRunning] = useState(false);
   const particlesRef = useRef<Particle[]>([]);
@@ -54,8 +8,7 @@ export function ConfettiPoppers({ active, onDone }: { active: boolean; onDone?: 
   useEffect(() => {
     if (!active || running) return;
     setRunning(true);
-    onDone?.();
-  }, [active, running, onDone]);
+  }, [active, running]);
 
   useEffect(() => {
     if (!running) return;
@@ -96,7 +49,7 @@ export function ConfettiPoppers({ active, onDone }: { active: boolean; onDone?: 
       }
     };
 
-    // Two popper bursts from left and right
+    // Three popper bursts from left, center and right
     const w = canvas.width;
     const h = canvas.height;
     spawn(w * 0.2, h * 0.7, 40);
