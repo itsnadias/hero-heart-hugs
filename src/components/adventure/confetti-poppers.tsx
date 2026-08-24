@@ -14,13 +14,14 @@ export function triggerConfetti() {
     const particleCount = Math.floor(4 * progress) + 2;
 
     for (let i = 0; i < particleCount; i++) {
+      const color = colors[Math.floor(Math.random() * colors.length)] ?? "#FACC15";
       const el = document.createElement("div");
       el.style.position = "fixed";
       el.style.left = `${Math.random() * 100}vw`;
       el.style.top = "-10px";
       el.style.width = `${Math.random() * 8 + 6}px`;
       el.style.height = `${Math.random() * 8 + 6}px`;
-      el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      el.style.backgroundColor = color;
       el.style.borderRadius = Math.random() > 0.5 ? "50%" : "2px";
       el.style.pointerEvents = "none";
       el.style.zIndex = "9999";
@@ -85,8 +86,8 @@ export function ConfettiPoppers({ active, onDone }: { active: boolean; onDone?: 
           gravity: 0.2,
           drag: 0.96,
           size: Math.random() * 6 + 4,
-          color: colors[Math.floor(Math.random() * colors.length)]!,
-          shape: shapes[Math.floor(Math.random() * shapes.length)]!,
+          color: colors[Math.floor(Math.random() * colors.length)] ?? "#FACC15",
+          shape: shapes[Math.floor(Math.random() * shapes.length)] ?? "circle",
           rotation: Math.random() * 360,
           rotationSpeed: Math.random() * 10 - 5,
           life: 1,
