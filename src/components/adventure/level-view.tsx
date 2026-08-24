@@ -157,12 +157,7 @@ export function LevelView({
         </div>
       )}
 
-      {showConfetti && (
-        <ConfettiPoppers
-          active={showConfetti}
-          onDone={() => onComplete(earned + POINTS.level)}
-        />
-      )}
+      {showConfetti && <ConfettiPoppers active={showConfetti} />}
 
       {level.askTeam && (
         <p className="mt-6 rounded-3xl border-3 border-dashed border-border bg-card p-4 text-base">
