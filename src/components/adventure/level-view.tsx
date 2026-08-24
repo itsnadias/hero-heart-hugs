@@ -24,6 +24,7 @@ export function LevelView({
   const [cardIndex, setCardIndex] = useState(0);
   const [activityIndex, setActivityIndex] = useState(0);
   const [earned, setEarned] = useState(0);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const bubbles: Record<string, string> = {
     sunny: "bg-sunny/20 border-sunny",
