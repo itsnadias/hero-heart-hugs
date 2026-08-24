@@ -26,6 +26,14 @@ export function LevelView({
   const [earned, setEarned] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
 
+  useEffect(() => {
+    if (!showConfetti) return;
+    const id = setTimeout(() => {
+      onComplete(earned + POINTS.level);
+    }, 1600);
+    return () => clearTimeout(id);
+  }, [showConfetti, earned, onComplete]);
+
   const bubbles: Record<string, string> = {
     sunny: "bg-sunny/20 border-sunny",
     sky: "bg-sky/20 border-sky",
