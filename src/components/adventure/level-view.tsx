@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CHARACTERS, POINTS, type Level } from "@/lib/adventure-types";
 import { useAppState } from "@/lib/app-state";
 import { ActivityPlayer } from "./activity-player";
+import { ConfettiPoppers } from "./confetti-poppers";
 import { cn } from "@/lib/utils";
 import { pickIllustration } from "@/lib/card-illustrations";
 
@@ -23,6 +24,15 @@ export function LevelView({
   const [cardIndex, setCardIndex] = useState(0);
   const [activityIndex, setActivityIndex] = useState(0);
   const [earned, setEarned] = useState(0);
+  const [showConfetti, setShowConfetti] = useState(false);
+
+  useEffect(() => {
+    if (!showConfetti) return;
+    const id = setTimeout(() => {
+      onComplete(earned + POINTS.level);
+    }, 1600);
+    return () => clearTimeout(id);
+  }, [showConfetti, earned, onComplete]);
 
   const bubbles: Record<string, string> = {
     sunny: "bg-sunny/20 border-sunny",
@@ -136,12 +146,18 @@ export function LevelView({
                 setActivityIndex(activityIndex + 1);
               } else {
                 playSound("celebrate");
-                onComplete(total2 + POINTS.level);
+                if (settings.reduceMotion) {
+                  onComplete(total2 + POINTS.level);
+                } else {
+                  setShowConfetti(true);
+                }
               }
             }}
           />
         </div>
       )}
+
+      {showConfetti && <ConfettiPoppers active={showConfetti} />}
 
       {level.askTeam && (
         <p className="mt-6 rounded-3xl border-3 border-dashed border-border bg-card p-4 text-base">
