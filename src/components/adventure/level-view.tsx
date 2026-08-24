@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CHARACTERS, POINTS, type Level } from "@/lib/adventure-types";
 import { useAppState } from "@/lib/app-state";
 import { ActivityPlayer } from "./activity-player";
