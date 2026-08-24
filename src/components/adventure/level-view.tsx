@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CHARACTERS, POINTS, type Level } from "@/lib/adventure-types";
 import { useAppState } from "@/lib/app-state";
 import { ActivityPlayer } from "./activity-player";
+import { ConfettiPoppers } from "./confetti-poppers";
 import { cn } from "@/lib/utils";
 import { pickIllustration } from "@/lib/card-illustrations";
 
