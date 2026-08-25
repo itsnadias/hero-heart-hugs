@@ -1,47 +1,54 @@
-# Welcome to Brave Buddies! 🌟
+# Hi, Brave Buddy! 🌟
 
-Hi, friend! Brave Buddies is a gentle little app that helps kids learn about cancer in a way that feels safe, hopeful, and maybe even a little bit fun.
+Welcome to Brave Buddies — a cozy, colorful app made just for you!
 
-We know big words like “cancer” can feel scary. That’s why we made this app soft, colorful, and full of friendly animal helpers. Nothing here is meant to frighten you, and nothing here replaces the grown-ups and doctors who know you best.
+Big words like “cancer” can sound scary. But here, you’ll meet friendly animal buddies who help you learn in a soft, happy way. No scary pictures. No sad stuff. Just fun facts, little games, and lots of cheering for you!
+
+This app is not a doctor. It’s here to help you understand and feel hopeful. Your grown-ups, nurses, and doctors know *you* best, and you can always ask them anything.
 
 ## What is Brave Buddies?
 
-Brave Buddies is a cozy adventure where you pick a topic you’d like to learn about — like leukemia, lymphoma, or another childhood cancer — and then play through five short levels with five animal friends.
+Brave Buddies is an adventure you play in five little levels.
 
-Each level is like a mini story with games, facts, and kind questions. You’ll earn points, collect a surprise gift at the end, and learn that asking questions is a brave thing to do.
+1. You pick a topic — like leukemia, lymphoma, or another childhood cancer.
+2. You meet five animal friends who each have a special job.
+3. You play games, tap buttons, and explore fun facts.
+4. You earn points, see confetti, and get a surprise gift at the end!
 
-## Your animal buddies
+Every level is like a tiny story. You can go as fast or as slow as you like. There are no wrong answers — only chances to try again and learn more.
 
-- **🦁 Leo the Lion** — *Meet Your Body*  
-  Leo is warm and brave. He helps you learn where things happen in your body.
+## Meet your buddies
 
-- **🐼 Pia the Panda** — *Understanding This Topic*  
-  Pia is curious and clever. She turns facts into little quizzes and puzzles.
+- **🦁 Leo the Lion** — *Meet Your Body*
+  Leo is warm, brave, and strong. He shows you cool things about your body and how it works.
 
-- **🐬 Daisy the Dolphin** — *Taking Care of Yourself*  
-  Daisy is splashy and kind. She teaches healthy habits like rest, water, and gentle movement.
+- **🐼 Pia the Panda** — *Understanding This Topic*
+  Pia is curious and clever. She turns big ideas into little quizzes and puzzles.
 
-- **🦊 Finn the Fox** — *Your Healthcare Team*  
+- **🐬 Daisy the Dolphin** — *Taking Care of Yourself*
+  Daisy is splashy and kind. She teaches you about rest, water, yummy food, and gentle movement.
+
+- **🦊 Finn the Fox** — *Your Healthcare Team*
   Finn is chatty and helpful. He introduces the doctors, nurses, and helpers who care for kids.
 
-- **🐢 Toby the Turtle** — *You’re a Super Learner!*  
+- **🐢 Toby the Turtle** — *You’re a Super Learner!*
   Toby is calm and encouraging. He helps you celebrate everything you learned.
 
-## How it works
+## How to play
 
-1. **Pick a topic** on the home screen. You can type it in or choose from friendly suggestions.
-2. **Start your adventure** with Leo and friends.
-3. **Play little games** and learn facts at your own pace.
+1. **Pick a topic** on the home screen. Type it or tap a friendly suggestion.
+2. **Start your adventure** with Leo.
+3. **Play little games** and read fun facts at your own pace.
 4. **Earn points** and collect a surprise gift at the finish line.
-5. **Ask your team** — grown-ups, doctors, nurses, or caregivers — any questions you have.
+5. **Ask your team** — your grown-ups, doctors, nurses, or caregivers — anything you want to know.
 
-## Important safety notes
+## Safety notes just for you
 
-Brave Buddies is for learning and encouragement only. It is **not** a doctor, and it cannot tell you what treatment you need.
+Brave Buddies is for learning and smiles only. It is **not** a doctor, and it cannot tell you what treatment you need.
 
-- Always ask a grown-up or your healthcare team about your own body.
-- No food, activity, or game in this app can cure cancer.
-- The information here comes from trusted medical sources, but your doctors know *you* best.
+- Ask a grown-up or your healthcare team about your own body.
+- No game, food, or activity here can cure cancer.
+- The facts come from trusted medical sources, but your doctors know *you* best.
 - If something feels scary or confusing, talk to a grown-up you trust.
 
 ## Grown-up corner
@@ -60,7 +67,7 @@ Brave Buddies tries to be friendly for everyone:
 
 ## The big idea
 
-You can learn about your body, ask questions, take care of yourself, and talk to the people who help you. That makes you a Brave Buddy.
+You can learn about your body, ask questions, take care of yourself, and talk to the people who help you. That makes you a Brave Buddy!
 
 ---
 
