@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { Activity } from "@/lib/adventure-types";
 import { POINTS } from "@/lib/adventure-types";
 import { useAppState } from "@/lib/app-state";
@@ -33,6 +33,17 @@ function NextButton({ onClick, label = "Next" }: { onClick: () => void; label?: 
       {label} →
     </button>
   );
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = copy[i]!;
+    copy[i] = copy[j]!;
+    copy[j] = temp;
+  }
+  return copy;
 }
 
 export function ActivityPlayer({ activity, onDone }: Props) {
@@ -127,7 +138,10 @@ export function ActivityPlayer({ activity, onDone }: Props) {
   }
 
   if (activity.type === "match") {
-    const rights = activity.pairs.map((p, i) => ({ text: p.right, i }));
+    const rights = useMemo(
+      () => shuffle(activity.pairs.map((p, i) => ({ text: p.right, i }))),
+      [activity.pairs],
+    );
     const allDone = Object.keys(matched).length === activity.pairs.length;
     return (
       <div>
