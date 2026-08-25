@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { Activity } from "@/lib/adventure-types";
 import { POINTS } from "@/lib/adventure-types";
 import { useAppState } from "@/lib/app-state";
