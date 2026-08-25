@@ -138,7 +138,10 @@ export function ActivityPlayer({ activity, onDone }: Props) {
   }
 
   if (activity.type === "match") {
-    const rights = activity.pairs.map((p, i) => ({ text: p.right, i }));
+    const rights = useMemo(
+      () => shuffle(activity.pairs.map((p, i) => ({ text: p.right, i }))),
+      [activity.pairs],
+    );
     const allDone = Object.keys(matched).length === activity.pairs.length;
     return (
       <div>
